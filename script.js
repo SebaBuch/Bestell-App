@@ -50,7 +50,7 @@ function renderBasket() {
     const subtotal = getSubtotal();
     const total = subtotal + DELIVERY_FEE;
 
-    itemsRef.innerHTML = `<ul class="baske-items">${itemsHtml}</ul>`;
+    itemsRef.innerHTML = `<ul class="basket-items">${itemsHtml}</ul>`;
     summaryRef.innerHTML = getBasketSummaryTemplate(subtotal, DELIVERY_FEE, total);
     orderButtonRef.disabled = false;
     orderButtonRef.textContent = `Jetzt bestellen (${formatPrice(total)})`;
