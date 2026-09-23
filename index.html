@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BurgerHouse - BestellApp</title>
   <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
- 
+
   <header class="header">
     <a class="header-logo" href="" aria-label="BestellApp - zur Startseite">
       <img src="" alt="">
     </a>
     <button class="header-menu-button" type="button" aria-label="Menü öffnen">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
       </svg>
     </button>
   </header>
- 
+
   <section class="hero">
     <img class="hero-image" src="" alt="">
     <img class="hero-logo" src="" alt="">
   </section>
- 
+
   <section class="restaurant">
     <div class="restaurant-title-row">
       <h1 class="restaurant-name"><span class="restaurant-name-accent">Burger</span>House</h1>
-      <span class="restaurant-rating" role="img" aria-label="Bewertung 4,1 von 5 Sternen, 317 Bewertungen">★ 4,1 (317)</span>
+      <span class="restaurant-rating" role="img" aria-label="Bewertung 4,1 von 5 Sternen, 317 Bewertungen">★ 4,1
+        (317)</span>
     </div>
     <p class="restaurant-description">Das Beste aus Burgern, Pizza und Salaten - alles an einem großartigen Ort.</p>
   </section>
- 
+
   <main class="content">
     <div id="menu" class="menu"></div>
- 
+
     <aside class="basket" aria-labelledby="basket-title">
       <h2 id="basket-title" class="baskettitle">Dein Warenkorb</h2>
       <div id="basket-items"></div>
@@ -43,15 +46,16 @@
       <p id="order-message" class="basket-message" role="status"></p>
     </aside>
   </main>
- 
+
   <footer class="footer">
     <span>© 2026 BurgerHouse</span>
     <a href="#">Impressum</a>
     <a href="#">Cookie-Einstellungen</a>
   </footer>
- 
+
   <script src="./template.js"></script>
   <script src="./script.js"></script>
   <script>init();</script>
 </body>
+
 </html>

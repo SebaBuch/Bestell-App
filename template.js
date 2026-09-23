@@ -1,5 +1,5 @@
 function getCategoryTemplate(category, dishesHtml) {
-    return `
+  return `
     <section class="category" aria-labelledby="category-${category.id}">
       <div class="category-header">
         <img class="category-icon" src="${category.icon}" alt="">
@@ -13,9 +13,9 @@ function getCategoryTemplate(category, dishesHtml) {
 }
 
 function getDishTemplate(dish) {
-    const amount = getAmountInBasket(dish.id);
+  const amount = getAmountInBasket(dish.id);
 
-    return `
+  return `
     <article class="dish">
       <img class="dish-image" src="${dish.img}" alt="${dish.name}">
       <div class="dish-content">
@@ -38,7 +38,7 @@ function getDishTemplate(dish) {
 }
 
 function getBasketItemTemplate(dish, amount) {
-    return `
+  return `
     <li class="basket-item">
       <p class="basket-item-name">${amount} x ${dish.name}</p>
       <div class="basket-item-row">
@@ -53,13 +53,13 @@ function getBasketItemTemplate(dish, amount) {
 }
 
 function getEmptyBasketTemplate() {
-    return `
+  return `
     <p class="basket-empty">Dein Warenkorb ist leer. Füge Gerichte aus der Speisekarte hinzu.</p>
   `;
 }
 
 function getBasketSummaryTemplate(subtotal, deliveryFee, total) {
-    return `
+  return `
     <div class="basket-row">
       <span>Zwischensumme</span>
       <span>${formatPrice(subtotal)}</span>
