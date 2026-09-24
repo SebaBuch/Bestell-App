@@ -1,9 +1,9 @@
 const DELIVERY_FEE = 4.99;
 
 const categories = [
-    { id: 'burger', title: 'Burger & Sandwiches', icon: './assets/icon/burger.svg' },
-    { id: 'pizza', title: 'Pizza (30cm)', icon: './assets/icon/pizza.svg' },
-    { id: 'salad', title: 'Salat', icon: './assets/icon/salad.svg' }
+    { id: 'burger', title: 'Burger & Sandwiches', icon: './assets/icon/burger.png' },
+    { id: 'pizza', title: 'Pizza (30cm)', icon: './assets/icon/pizza.png' },
+    { id: 'salad', title: 'Salat', icon: './assets/icon/salad.png' }
 ];
 
 const dishes = [
@@ -11,37 +11,37 @@ const dishes = [
     {
         id: 0,
         categoryId: 'burger',
-        name: 'Veggie Pilz Black Burger',
+        name: 'Veggie mushroom black burger',
         description: 'Gemischter Salat, Tomaten, Edamame, Pilze',
         price: 16.9,
-        img: './assets/img/dishes/veggie-mushroom-black-burger.jpg'
+        img: 'assets/img/veggie mushroom black burger.png'
     },
 
     {
         id: 1,
         categoryId: 'burger',
-        name: 'All Meat Burger',
+        name: 'All meat burger',
         description: 'Rind, Speck, Gewürzgurke, Räucherkäse, Ketchup, BBQ-Sauce',
         price: 15.9,
-        img: './assets/img/dishes/all-meat-burger.jpg'
+        img: 'assets/img/all meat burger.png'
     },
 
     {
         id: 2,
         categoryId: 'burger',
-        name: 'Beef Red Burger',
+        name: 'Beef red burger',
         description: 'Rind, Käse, Tomaten, Salat, Zwiebeln',
         price: 14.9,
-        img: './assets/img/dishes/beef-red-burger.jpg'
+        img: 'assets/img/beef red burger.png'
     },
 
     {
         id: 3,
         categoryId: 'burger',
-        name: 'Big Chicken Burger',
+        name: 'Big chicken burger',
         description: 'Hähnchen, Käse, Tomaten, Salat, Zwiebeln, Paprika',
         price: 15.9,
-        img: './assets/img/dishes/big-chicken-burger.jpg'
+        img: 'assets/img/big chicken burger.png'
     },
 
     {
@@ -50,7 +50,7 @@ const dishes = [
         name: 'Pizza Margherita',
         description: 'Tomatensauce, Mozzarella',
         price: 11.9,
-        img: './assets/img/dishes/pizza-margherita.jpg'
+        img: 'assets/img/margherita pizza.png'
     },
 
     {
@@ -59,7 +59,7 @@ const dishes = [
         name: 'Pizza Chorizo',
         description: 'Tomatenscheiben, Mozzarella, Chorizo',
         price: 13.9,
-        img: './assets/img/dishes/pizza-chorizo.jpg'
+        img: 'assets/img/chorizo pizza.png'
     },
 
     {
@@ -68,51 +68,51 @@ const dishes = [
         name: 'Funghi',
         description: 'Rote Zwiebeln, Oliven, Champignons, Mozzarella',
         price: 12.9,
-        img: './assets/img/dishes/pizza-funghi.jpg'
+        img: 'assets/img/funghi pizza.png'
     },
 
     {
         id: 7,
         categoryId: 'pizza',
-        name: 'Quattro Formaggi mit Hähnchen',
+        name: 'Quattro formaggi with chicken',
         description: 'Hähnchen, Mozzarella, Gorgonzola, Fontina, Parmigiano Reggiano',
         price: 15.9,
-        img: './assets/img/dishes/pizza-quattro-formaggi.jpg'
+        img: 'assets/img/quattro formaggi with chicken pizza.png'
     },
 
     {
         id: 8,
         categoryId: 'salad',
-        name: 'Warmer Rindfleisch-Rucola-Salat',
+        name: 'Warm beef argula salad',
         description: 'Rind, Rucola, Feldsalat, griechischer Feta, Kirschtomaten, getrocknete Tomaten, Balsamico-Dressing',
         price: 16.9,
-        img: './assets/img/dishes/beef-arugula-salad.jpg'
+        img: 'assets/img/warm beef argula salad.png'
     },
 
     {
         id: 9,
         categoryId: 'salad',
-        name: 'Mini grüner Salat',
+        name: 'Mini green salad',
         description: 'Grüner Salat, Gurke, Karotten, Petersilie, Radieschen',
         price: 7.9,
-        img: './assets/img/dishes/mini-green-salad.jpg'
+        img: 'assets/img/mini green salad.png'
     },
 
     {
         id: 10,
         categoryId: 'salad',
-        name: 'Grüner Salat mit Meeresfrüchten',
+        name: 'Green salad with sea food',
         description: 'Gemischter Salat, Kirschtomaten, rote Zwiebeln, Miesmuscheln, Tintenfischringe, Garnelen, Dijon-Senf-Zitronen-Dressing mit Dill',
         price: 16.9,
-        img: './assets/img/dishes/seafood-salad.jpg'
+        img: 'assets/img/green salad with sea food.png'
     },
 
     {
         id: 11,
         categoryId: 'salad',
-        name: 'Veganer grüner Salat mit Tofu',
+        name: 'Veggie mushroom black burger',
         description: 'Grüner Salat, Kirschtomaten, Gurke, Babyspinat, Edamame, Radieschen, Brunnenkresse, Tofu, Erdnüsse',
         price: 14.9,
-        img: './assets/img/dishes/vegan-tofu-salad.jpg'
+        img: 'assets/img/veggie mushroom black burger.png'
     }
 ];

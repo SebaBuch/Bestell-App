@@ -1,4 +1,5 @@
 let basket = [];
+let basketOpen = false;
 
 function init() {
     renderMenu();
@@ -73,9 +74,23 @@ function addToBasket(dishId) {
         basket[index].amount++;
     }
 
-    setOrderMessage('');
+    setBasketOpen(true);
     updateDishButton(dishId);
     renderBasket();
+}
+
+function setBasketOpen(isOpen) {
+    basketOpen = isOpen;
+    document.querySelector('.content').classList.toggle('content--basket-open', isOpen);
+    document.querySelector('.basket').classList.toggle('basket--open', isOpen);
+}
+
+function openOrderModal() {
+    document.getElementById('order-modal').hidden = false;
+}
+
+function closeOrderModal() {
+    document.getElementById('order-modal').hidden = true;
 }
 
 function changeAmount(dishId, change) {
@@ -102,7 +117,8 @@ function placeOrder() {
     }
 
     renderBasket();
-    setOrderMessage('Vielen Dank für deine Bestellung! (Testbestellung)');
+    setBasketOpen(false);
+    openOrderModal();
 }
 
 function getDishById(dishId) {
@@ -140,8 +156,4 @@ function getDishButtonText(amount) {
 
 function formatPrice(value) {
     return value.toFixed(2).replace('.', ',') + '€';
-}
-
-function setOrderMessage(text) {
-    document.getElementById('order-message').textContent = text;
 }

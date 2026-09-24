@@ -1,13 +1,15 @@
 function getCategoryTemplate(category, dishesHtml) {
   return `
     <section class="category" aria-labelledby="category-${category.id}">
-      <div class="category-header">
+    <div class="category-header">
+      <div class="category-header-inner">
         <img class="category-icon" src="${category.icon}" alt="">
         <h2 id="category-${category.id}" class="category-title">${category.title}</h2>
       </div>
-      <div class="category-dishes">
-        ${dishesHtml}
-      </div>
+    </div>
+    <div class="category-dishes">
+      ${dishesHtml}
+    </div>
     </section>
   `;
 }
