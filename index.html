@@ -43,7 +43,10 @@
     <div id="menu" class="menu"></div>
 
     <aside class="basket" aria-labelledby="basket-title">
-      <h2 id="basket-title" class="basket-title">Dein Warenkorb</h2>
+      <div class="basket-header">
+        <h2 id="basket-title" class="basket-title">Dein Warenkorb</h2>
+        <button class="basket-close" type="button" onclick="closeBasket()" aria-label="Warenkorb schließen">✕</button>
+      </div>
       <div id="basket-items"></div>
       <div id="basket-summary"></div>
       <button id="order-button" class="basket-order-button" type="button" onclick="placeOrder()">Jetzt
@@ -58,6 +61,36 @@
       <button class="modal-close" type="button" onclick="closeOrderModal()">OK</button>
     </div>
   </div>
+
+  <nav class="bottom-nav" aria-label="Hauptnavigation">
+    <button class="bottom-nav-button" type="button" aria-label="Start">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M3 11l9-8 9 8M5 10v10h5v-6h4v6h5V10" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <button class="bottom-nav-button" type="button" aria-label="Profil">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" />
+      </svg>
+    </button>
+    <button class="bottom-nav-button" type="button" aria-label="Speisekarte">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M6 3v9m0 0v9M6 12H4.5C4.5 12 4 9 6 3M18 3v18M14 3c0 4-1 6-1 6s1 2 1 6" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+    <button class="bottom-nav-button" type="button" onclick="toggleBasket()" aria-label="Warenkorb öffnen">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <circle cx="10" cy="21" r="1.4" fill="currentColor" />
+        <circle cx="17" cy="21" r="1.4" fill="currentColor" />
+      </svg>
+    </button>
+  </nav>
 
   <footer class="footer">
     <span>© 2026 BurgerHouse</span>

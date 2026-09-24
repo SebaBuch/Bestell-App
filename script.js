@@ -11,13 +11,13 @@ function renderMenu() {
     let html = '';
 
     for (let i = 0; i < categories.length; i++) {
-        html += getCategoryTemplate(categories[i], getDishesHtml(categories[i].id));
+        html += getCategoryTemplate(categories[i], getDishes(categories[i].id));
     }
 
     menuRef.innerHTML = html;
 }
 
-function getDishesHtml(categoryId) {
+function getDishes(categoryId) {
     let html = '';
 
     for (let i = 0; i < dishes.length; i++) {
@@ -74,15 +74,25 @@ function addToBasket(dishId) {
         basket[index].amount++;
     }
 
-    setBasketOpen(true);
+    if (window.innerWidth > 900) {
+        setBasketOpen(true);
+    }
+
     updateDishButton(dishId);
     renderBasket();
 }
 
 function setBasketOpen(isOpen) {
     basketOpen = isOpen;
-    document.querySelector('.content').classList.toggle('content--basket-open', isOpen);
     document.querySelector('.basket').classList.toggle('basket--open', isOpen);
+}
+
+function toggleBasket() {
+    setBasketOpen(!basketOpen);
+}
+
+function closeBasket() {
+    setBasketOpen(false);
 }
 
 function openOrderModal() {
