@@ -11,13 +11,13 @@ function renderMenu() {
     let html = '';
 
     for (let i = 0; i < categories.length; i++) {
-        html += getCategoryTemplate(categories[i], getDishes(categories[i].id));
+        html += getCategoryTemplate(categories[i], getDishesHtml(categories[i].id));
     }
 
     menuRef.innerHTML = html;
 }
 
-function getDishes(categoryId) {
+function getDishesHtml(categoryId) {
     let html = '';
 
     for (let i = 0; i < dishes.length; i++) {

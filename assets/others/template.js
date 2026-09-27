@@ -7,9 +7,7 @@ function getCategoryTemplate(category, dishesHtml) {
         <h2 id="category-${category.id}" class="category-title">${category.title}</h2>
       </div>
     </div>
-    <div class="category-dishes-wrapper">
         <div class="category-dishes">${dishesHtml}</div>
-    </div>
     </section>
   `;
 }
