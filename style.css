@@ -6,15 +6,15 @@
     padding: 0;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Ubuntu', system-ui, sans-serif;
     color: #2b2b2b;
     background: #ffffff;
     line-height: 1.4;
-}
-
-html {
-    overflow-x: hidden;
 }
 
 img {
@@ -110,6 +110,7 @@ a {
 }
 
 .restaurant-name {
+    font-family: 'Palanquin Dark';
     font-size: 2.25rem;
     font-weight: 700;
 }
@@ -122,10 +123,14 @@ a {
     padding: 2px 10px;
     border-radius: 6px;
     background: #f5e8d5;
+    font-family: 'Palanquin Dark';
+    font-weight: 400;
     font-size: 0.85rem;
 }
 
 .restaurant-description {
+    font-family: 'Palanquin';
+    font-weight: 700;
     margin-top: 8px;
 }
 
@@ -175,8 +180,9 @@ a {
 }
 
 .category-title {
+    font-family: 'Palanquin';
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 700;
 }
 
 .category-dishes {
@@ -217,16 +223,20 @@ a {
 }
 
 .dish-name {
+    font-family: 'Palanquin';
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .dish-price {
-    font-weight: 700;
+    font-family: 'Palanquin';
+    font-weight: 600;
     white-space: nowrap;
 }
 
 .dish-description {
+    font-family: 'Palanquin';
+    font-weight: 500;
     font-size: 0.8rem;
 }
 
@@ -237,8 +247,9 @@ a {
     border: none;
     border-radius: 6px;
     background: none;
+    font-family: 'Palanquin';
     font-size: 0.85rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .dish-button:hover {
@@ -269,8 +280,9 @@ a {
 
 .basket-title {
     margin-bottom: 16px;
+    font-family: 'Palanquin';
     font-size: 1.3rem;
-    font-weight: 400;
+    font-weight: 700;
     text-align: center;
 }
 
@@ -295,6 +307,7 @@ a {
 }
 
 .basket-item-name {
+    font-family: 'Palanquin';
     font-size: 0.95rem;
     font-weight: 700;
 }
@@ -317,7 +330,8 @@ a {
     border: 1px solid #2b2b2b;
     border-radius: 50%;
     background: transparent;
-    font-weight: 700;
+    font-family: 'Palanquin';
+    font-weight: 600;
     line-height: 1;
 }
 
@@ -326,6 +340,7 @@ a {
 }
 
 .basket-item-price {
+    font-family: 'Palanquin';
     font-weight: 700;
 }
 
@@ -333,6 +348,8 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 2px 0;
+    font-family: 'Palanquin';
+    font-weight: 600;
     font-size: 0.9rem;
 }
 
@@ -351,6 +368,7 @@ a {
     border-radius: 999px;
     background: #e4622b;
     color: #ffffff;
+    font-family: 'Palanquin';
     font-size: 1.05rem;
     font-weight: 700;
 }
@@ -456,6 +474,8 @@ a {
     padding: 24px;
     background: #e4622b;
     color: #ffffff;
+    font-family: 'Palanquin';
+    font-weight: 400;
     font-size: 0.9rem;
 }
 
@@ -499,9 +519,9 @@ a {
         top: auto;
         left: 16px;
         right: 16px;
-        bottom: 63px;
+        bottom: 80px;
         width: auto;
-        height: 70%;
+        max-height: 85vh;
         border-radius: 20px;
         z-index: 90;
         display: none;
