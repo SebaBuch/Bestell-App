@@ -6,14 +6,12 @@
     padding: 0;
 }
 
-html {
-    overflow-x: hidden;
-}
-
 body {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'Palanquin', sans-serif;
     color: #2b2b2b;
     background: #ffffff;
     line-height: 1.4;
@@ -112,7 +110,7 @@ a {
 }
 
 .restaurant-name {
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
     font-size: 2.25rem;
     font-weight: 700;
 }
@@ -125,13 +123,12 @@ a {
     padding: 2px 10px;
     border-radius: 6px;
     background: #f5e8d5;
-    font-family: 'Palanquin Dark';
+    font-family: 'Palanquin Dark', sans-serif;
     font-weight: 400;
     font-size: 0.85rem;
 }
 
 .restaurant-description {
-    font-family: 'Palanquin';
     font-weight: 700;
     margin-top: 8px;
 }
@@ -155,13 +152,17 @@ a {
 }
 
 .category-header {
-    position: relative;
-    left: 50%;
-    width: 100vw;
-    margin-left: calc(-50vw + 174px);
     margin-bottom: 16px;
-    background: #e4622b;
     color: #ffffff;
+}
+
+.category-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 48px;
+    background: #e4622b;
 }
 
 .category-header-inner {
@@ -169,13 +170,12 @@ a {
     display: flex;
     align-items: center;
     height: 48px;
-    width: 100%;
-    padding-left: 96px;
+    padding-left: 72px;
 }
 
 .category-icon {
     position: absolute;
-    left: 24px;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     width: 60px;
@@ -183,7 +183,6 @@ a {
 }
 
 .category-title {
-    font-family: 'Palanquin';
     font-size: 1.5rem;
     font-weight: 700;
 }
@@ -226,19 +225,16 @@ a {
 }
 
 .dish-name {
-    font-family: 'Palanquin';
     font-size: 1.05rem;
     font-weight: 600;
 }
 
 .dish-price {
-    font-family: 'Palanquin';
     font-weight: 600;
     white-space: nowrap;
 }
 
 .dish-description {
-    font-family: 'Palanquin';
     font-weight: 500;
     font-size: 0.8rem;
 }
@@ -250,7 +246,6 @@ a {
     border: none;
     border-radius: 6px;
     background: none;
-    font-family: 'Palanquin';
     font-size: 0.85rem;
     font-weight: 600;
 }
@@ -274,26 +269,29 @@ a {
     border-radius: 12px;
     background: #2b2b2b;
     color: #ffffff;
-    visibility: hidden;
-}
-
-.basket--open {
-    visibility: visible;
 }
 
 .basket-title {
     margin-bottom: 16px;
-    font-family: 'Palanquin';
     font-size: 1.3rem;
     font-weight: 700;
     text-align: center;
+}
+
+.basket-items-area {
+    height: 256px;
+    margin-bottom: 16px;
+    overflow-y: auto;
 }
 
 .basket-items {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    margin-bottom: 16px;
+}
+
+.basket-summary {
+    min-height: 90px;
 }
 
 .basket-empty {
@@ -310,7 +308,6 @@ a {
 }
 
 .basket-item-name {
-    font-family: 'Palanquin';
     font-size: 0.95rem;
     font-weight: 700;
 }
@@ -333,7 +330,6 @@ a {
     border: 1px solid #2b2b2b;
     border-radius: 50%;
     background: transparent;
-    font-family: 'Palanquin';
     font-weight: 600;
     line-height: 1;
 }
@@ -343,7 +339,6 @@ a {
 }
 
 .basket-item-price {
-    font-family: 'Palanquin';
     font-weight: 700;
 }
 
@@ -351,7 +346,6 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 2px 0;
-    font-family: 'Palanquin';
     font-weight: 600;
     font-size: 0.9rem;
 }
@@ -371,7 +365,6 @@ a {
     border-radius: 999px;
     background: #e4622b;
     color: #ffffff;
-    font-family: 'Palanquin';
     font-size: 1.05rem;
     font-weight: 700;
 }
@@ -455,6 +448,7 @@ a {
 }
 
 .bottom-nav-button {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -469,6 +463,28 @@ a {
     height: 26px;
 }
 
+.bottom-nav-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #e4622b;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.bottom-nav-badge[hidden] {
+    display: none;
+}
+
 .footer {
     display: flex;
     flex-wrap: wrap;
@@ -477,7 +493,6 @@ a {
     padding: 24px;
     background: #e4622b;
     color: #ffffff;
-    font-family: 'Palanquin';
     font-weight: 400;
     font-size: 0.9rem;
 }
@@ -490,18 +505,13 @@ a {
     text-decoration: underline;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1460px) {
     .header-inner {
         width: 1440px;
         margin: 0 auto;
     }
 
     .content {
-        width: 1440px;
-        margin: 0 auto;
-    }
-
-    .category-header-inner {
         width: 1440px;
         margin: 0 auto;
     }
@@ -551,10 +561,6 @@ a {
         z-index: 95;
     }
 
-    .category-header {
-        margin-left: -50vw;
-    }
-
     .hero-image {
         height: 220px;
     }
@@ -575,7 +581,7 @@ a {
     }
 
     .category-header-inner {
-        padding-left: 88px;
+        padding-left: 64px;
     }
 
     .category-title {

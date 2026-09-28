@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BurgerHouse - BestellApp</title>
   <link rel="shortcut icon" href="assets/icon/main logo.png" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/others/fonts.css">
+  <link rel="stylesheet" href="./assets/fonts/fonts.css">
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -48,8 +48,8 @@
         <h2 id="basket-title" class="basket-title">Dein Warenkorb</h2>
         <button class="basket-close" type="button" onclick="closeBasket()" aria-label="Warenkorb schließen">✕</button>
       </div>
-      <div id="basket-items"></div>
-      <div id="basket-summary"></div>
+      <div id="basket-items" class="basket-items-area"></div>
+      <div id="basket-summary" class="basket-summary"></div>
       <button id="order-button" class="basket-order-button" type="button" onclick="placeOrder()">Jetzt
         bestellen
       </button>
@@ -83,13 +83,15 @@
           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </button>
-    <button class="bottom-nav-button" type="button" onclick="toggleBasket()" aria-label="Warenkorb öffnen">
+    <button id="basket-nav-button" class="bottom-nav-button" type="button" onclick="toggleBasket()"
+      aria-label="Warenkorb öffnen">
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6" fill="none" stroke="currentColor"
           stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         <circle cx="10" cy="21" r="1.4" fill="currentColor" />
         <circle cx="17" cy="21" r="1.4" fill="currentColor" />
       </svg>
+      <span id="basket-badge" class="bottom-nav-badge" aria-hidden="true" hidden>0</span>
     </button>
   </nav>
 
@@ -99,8 +101,8 @@
     <a href="#">Cookie-Einstellungen</a>
   </footer>
 
-  <script src="./assets/others/db.js"></script>
-  <script src="./assets/others/template.js"></script>
+  <script src="./assets/javascript/db.js"></script>
+  <script src="./assets/javascript/template.js"></script>
   <script src="./script.js"></script>
   <script>init();</script>
 </body>
